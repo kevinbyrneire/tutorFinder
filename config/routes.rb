@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :subject_items
+
+  resources :subjects
+
   resources :tutors
 
   # The priority is based upon order of creation: first created -> highest priority.

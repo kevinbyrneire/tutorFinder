@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :age %><br>
-    <%= f.date_select :age %>
+    <%= f.date_select :age, options={start_year:  Time.now.year-80, end_year: Time.now.year-10} %>
   </div>
   <div class="field">
     <%= f.label :phone %><br>
@@ -35,10 +35,7 @@
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :subjects %><br>
-    <%= f.text_field :subjects %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

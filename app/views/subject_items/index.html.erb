@@ -1,0 +1,27 @@
+<h1>Listing subject_items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tutors</th>
+      <th>Subjects</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subject_items.each do |subject_item| %>
+      <tr>
+        <td><%= subject_item.tutors %></td>
+        <td><%= subject_item.subjects %></td>
+        <td><%= link_to 'Show', subject_item %></td>
+        <td><%= link_to 'Edit', edit_subject_item_path(subject_item) %></td>
+        <td><%= link_to 'Destroy', subject_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subject item', new_subject_item_path %>
