@@ -1,0 +1,4 @@
+class RemoveSubjectsFromTutors < ActiveRecord::Migration
+  def change
+  end
+end

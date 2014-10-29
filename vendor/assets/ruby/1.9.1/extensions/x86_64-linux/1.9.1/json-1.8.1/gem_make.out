@@ -1,0 +1,12 @@
+/usr/bin/ruby1.9.1 -r ./siteconf20141028-14551-1cqgqn5.rb extconf.rb 
+creating Makefile
+
+make  clean
+
+make
+compiling parser.c
+linking shared-object json/ext/parser.so
+
+make  install
+/usr/bin/install -c -m 0755 parser.so .gem.20141028-14551-d39e3v/json/ext
+installing default parser libraries

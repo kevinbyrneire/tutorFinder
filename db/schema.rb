@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141014170058) do
+ActiveRecord::Schema.define(version: 20141029123027) do
 
   create_table "tutors", force: true do |t|
     t.string   "firstname"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20141014170058) do
     t.string   "phone"
     t.string   "location"
     t.string   "email"
-    t.string   "subjects"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
