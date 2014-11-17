@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029130810) do
+ActiveRecord::Schema.define(version: 20141117174907) do
 
   create_table "subject_items", force: true do |t|
-    t.integer  "tutors_id"
-    t.integer  "subjects_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "tutor_id"
+    t.integer  "subject_id"
   end
 
-  add_index "subject_items", ["subjects_id"], name: "index_subject_items_on_subjects_id"
-  add_index "subject_items", ["tutors_id"], name: "index_subject_items_on_tutors_id"
+  add_index "subject_items", ["subject_id"], name: "index_subject_items_on_subject_id"
+  add_index "subject_items", ["tutor_id"], name: "index_subject_items_on_tutor_id"
 
   create_table "subjects", force: true do |t|
     t.datetime "created_at"

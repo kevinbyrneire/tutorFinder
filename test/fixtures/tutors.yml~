@@ -7,6 +7,7 @@ one:
   phone: MyString
   location: MyString
   email: MyString
+  subjects: MyString
 
 two:
   firstname: MyString
@@ -15,3 +16,4 @@ two:
   phone: MyString
   location: MyString
   email: MyString
+  subjects: MyString

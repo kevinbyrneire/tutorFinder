@@ -1,6 +1,6 @@
 class Tutor < ActiveRecord::Base
   validates :firstname, :lastname, :email, presence: true
-  validate :validate_dob
+  validates_date :age, on_or_before: lambda { Date.current }
   
   has_many :line_items
   before_destroy :ensure_not_referenced_by_any_subject_item
@@ -17,7 +17,4 @@ def ensure_not_referenced_by_any_subject_item
   end
 end
 
-def validate_dob
-  self.age<Date.today
-end
 end

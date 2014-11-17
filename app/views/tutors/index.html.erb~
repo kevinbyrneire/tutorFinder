@@ -15,7 +15,7 @@
   <tbody>
     <% @tutors.each do |tutor| %>
       <tr>
-        <td><%= tutor.firstname + tutor.lastname %></td>
+        <td><%= link_to tutor.firstname + ' ' + tutor.lastname, tutor %></td>
         <td><%= tutor.age %></td>
         <td><%= tutor.phone %></td>
         <td><%= tutor.location %></td>
