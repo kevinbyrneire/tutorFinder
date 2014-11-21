@@ -2,12 +2,12 @@
 
 <p>
   <strong>Tutors:</strong>
-  <%= @subject_item.tutor %>
+  <%= @subject_item.tutors %>
 </p>
 
 <p>
   <strong>Subjects:</strong>
-  <%= @subject_item.subject %>
+  <%= @subject_item.subjects %>
 </p>
 
 <%= link_to 'Edit', edit_subject_item_path(@subject_item) %> |

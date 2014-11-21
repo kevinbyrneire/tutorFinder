@@ -1,0 +1,6 @@
+<h1>Editing bookin</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Show', @bookin %> |
+<%= link_to 'Back', bookins_path %>

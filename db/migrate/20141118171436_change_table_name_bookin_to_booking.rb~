@@ -1,0 +1,9 @@
+class ChangeTableNameBookinToBooking < ActiveRecord::Migration
+  def up
+    rename_table :bookin, :booking
+  end
+
+  def down
+    rename_table :booking, :bookin
+  end
+end

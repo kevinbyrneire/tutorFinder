@@ -1,0 +1,25 @@
+<h1>Listing bookins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tutor</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookins.each do |bookin| %>
+      <tr>
+        <td><%= bookin.tutor %></td>
+        <td><%= link_to 'Show', bookin %></td>
+        <td><%= link_to 'Edit', edit_bookin_path(bookin) %></td>
+        <td><%= link_to 'Destroy', bookin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bookin', new_bookin_path %>
