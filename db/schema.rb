@@ -11,16 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118173428) do
-
-  create_table "bookings", force: true do |t|
-    t.integer  "tutor_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.datetime "datetime"
-  end
-
-  add_index "bookings", ["tutor_id"], name: "index_bookings_on_tutor_id"
+ActiveRecord::Schema.define(version: 20141122153625) do
 
   create_table "subject_items", force: true do |t|
     t.datetime "created_at"
@@ -39,14 +30,12 @@ ActiveRecord::Schema.define(version: 20141118173428) do
   end
 
   create_table "tutors", force: true do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.date     "age"
-    t.string   "phone"
-    t.string   "location"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "firstname"
+    t.string "lastname"
+    t.string "phone"
+    t.string "email"
+    t.string "location"
+    t.string "password_digest"
   end
 
 end

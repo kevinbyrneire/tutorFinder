@@ -8,7 +8,25 @@
 </head>
 <body>
 
-<%= yield %>
+<div id='banner'>
+  TutorFinder
+  <%= link_to 'Home', tutors_url %>
+  <%if session[:user_id] == nil%>
+    |<%= link_to 'Create Account', new_tutor_path %> |
+	<%= link_to 'Login', login_url %>|
+	
+  <%else%>
+    <%= link_to 'Logout', logout_url %>
+	<span id='username'> Logged in as <%=link_to Tutor.find(session[:user_id]).email, Tutor.find(session[:user_id])%> </span>
+	
+  <%end%>
+</div>
+<div id='main'>
+  <%if notice %>
+    <p id="notice"><%= notice %></p>
+  <%end%>
+  <%= yield %>
+</div>
 
 </body>
 </html>

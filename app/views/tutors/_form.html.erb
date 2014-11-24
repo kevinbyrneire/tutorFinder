@@ -19,10 +19,7 @@
     <%= f.label :lastname %><br>
     <%= f.text_field :lastname %>
   </div>
-  <div class="field">
-    <%= f.label :age %><br>
-    <%= f.date_select :age, options={end_year: Time.now.year-10, start_year:  Time.now.year-80} %>
-  </div>
+
   <div class="field">
     <%= f.label :phone %><br>
     <%= f.text_field :phone %>
@@ -34,6 +31,17 @@
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
+  </div>
+  
+    <div class="field">
+    <%= f.label :password, 'Password:' %>
+    <%= f.password_field :password, size: 40 %>
+  </div>
+
+  
+  <div class="field">
+    <%= f.label :password_confirmation, 'Confirm:' %>
+    <%= f.password_field :password_confirmation, size: 40 %>
   </div>
 
   <div class="actions">

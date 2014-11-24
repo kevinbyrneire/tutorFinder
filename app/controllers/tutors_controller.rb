@@ -1,4 +1,5 @@
 class TutorsController < ApplicationController
+  skip_before_action :authorize, only: [:show, :index, :create, :new]
   before_action :set_tutor, only: [:show, :edit, :update, :destroy]
 
   # GET /tutors
@@ -28,6 +29,7 @@ class TutorsController < ApplicationController
 
     respond_to do |format|
       if @tutor.save
+	    session[:user_id] = @tutor.id
         format.html { redirect_to @tutor, notice: 'Tutor was successfully created.' }
         format.json { render :show, status: :created, location: @tutor }
       else
@@ -69,6 +71,6 @@ class TutorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tutor_params
-      params.require(:tutor).permit(:firstname, :lastname, :age, :phone, :location, :email)
+      params.require(:tutor).permit(:firstname, :lastname, :phone, :location, :email, :password, :password_confirmation)
     end
 end

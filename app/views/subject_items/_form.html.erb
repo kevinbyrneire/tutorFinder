@@ -12,14 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :tutors_id %><br>
-    <%= f.text_field :tutors_id %>
-  </div>
-  <div class="field">
-    <%= f.label :subjects_id %><br>
-    <%= f.text_field :subjects_id %>
+    <%= f.label :subject_id %><br>
+    <%= f.select :subject_id, Subject.all.map {|p| [p.subject,p.id]} %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit"%>
   </div>
 <% end %>
