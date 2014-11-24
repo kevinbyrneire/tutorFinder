@@ -56,8 +56,9 @@ class SubjectItemsController < ApplicationController
   # DELETE /subject_items/1.json
   def destroy
     @subject_item.destroy
+	tutor = Tutor.find(session[:user_id])
     respond_to do |format|
-      format.html { redirect_to tutors_url, notice: 'Subject item was successfully destroyed.' }
+      format.html { redirect_to tutor, notice: 'Subject item was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

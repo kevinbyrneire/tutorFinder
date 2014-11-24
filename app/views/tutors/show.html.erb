@@ -1,6 +1,6 @@
 <h1> <%= @tutor.firstname + ' '+ @tutor.lastname %> </h1>
 <% if @tutor.id== session[:user_id] %>
-<%= link_to 'Edit Profile', edit_tutor_path(@tutor) %>
+<%= link_to 'Edit Profile', edit_tutor_path(@tutor) %> |
 <%= link_to 'Remove Account', @tutor, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%end %>
 
