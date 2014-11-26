@@ -41,7 +41,8 @@ a:visited{
   border-bottom: 2px solid;
   
   color: #454545;
-  
+  h1 {
+    font-size: 40px; }
 
   img {
     float: left;

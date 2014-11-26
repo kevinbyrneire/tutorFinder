@@ -57,6 +57,7 @@ class TutorsController < ApplicationController
   # DELETE /tutors/1.json
   def destroy
     @tutor.destroy
+	session[:user_id]=nil
     respond_to do |format|
       format.html { redirect_to tutors_url, notice: 'Tutor was successfully destroyed.' }
       format.json { head :no_content }
